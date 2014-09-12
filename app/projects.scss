@@ -1,10 +1,9 @@
+@import 'config';
 @import 'ui-kit/mixins';
 @import 'ui-kit/application/colors';
 @import 'ui-kit/application/helpers-classes';
 
 // Projects list style
-
-$projects_image_path: "/images/app/projects_list/";
 
 @mixin icon_bg($file, $left:"center", $top:"center", $bg_color:"transparent") {
    background: url( $projects_image_path + $file ) $left $top no-repeat scroll $bg_color;

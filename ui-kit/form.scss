@@ -1,4 +1,6 @@
+@import 'config';
 @import 'ui-kit/mixins';
+
 form.fancy {
    > p {
       @include font(Avenir, normal, 16px, #96b2ba, 21px);
