@@ -1,0 +1,251 @@
+@import 'config';
+@import 'ui-kit/mixins';
+@import 'ui-kit/application/colors';
+@import 'ui-kit/application/helpers-classes';
+
+// Missions list style
+
+.icon {
+   &.icon-metadata-documents {
+      width: 20px;
+      height: 20px;
+      background: url($projects_image_path + 'metadata_documents.png') center -1px no-repeat scroll transparent;
+   }
+   &.icon-metadata-threads {
+      width: 20px;
+      height: 20px;
+      background: url($projects_image_path + 'metadata_threads.png') center -1px no-repeat scroll transparent;
+   }
+   &.icon-metadata-tasks {
+      width: 20px;
+      height: 20px;
+      background: url($projects_image_path + 'metadata_tasks.png') center 0px no-repeat scroll transparent;
+   }
+}
+
+.project-missions {
+
+   .content {
+      padding-top: 20px;
+
+      .left-block {
+         padding-left:0;
+      }
+
+      .right-block {
+         padding-right:0;
+      }
+   }
+
+   .nice-block.drafts {
+      padding: 0 25px;
+   }
+
+   .nice-block.missions {
+      padding: 0;
+
+      h2 {
+         padding: 25px 25px 0 25px;
+      }
+   }
+
+   .deadline {
+      h2 {
+         float:left;
+      }
+      .icon-settings {
+         float: right;
+         margin-top: -2px;
+      }
+
+      .mission-progress-svg {
+         circle {
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 1s linear;
+            stroke-width: 3px;
+            stroke: $blue_active;
+         }
+
+         .bg {
+            stroke: #f3f3f3;
+         }
+      }
+
+      .mission-progress {
+         text-align: center;
+         cursor: default;
+
+         .remaining {
+            position: absolute;
+            color: $blue_active;
+            font-size: 24px;
+            font-weight: 500;
+            top: 50%;
+            left: 50%;
+            margin-top: -18px;
+            margin-left: -26px;
+            text-align: center;
+            width: 55px;
+         }
+      }
+
+      .created-at, .deadline-at {
+         text-align: center;
+         font-size: 12px;
+         div {
+            color: #96b2ba;
+            font-weight: 300;
+         }
+      }
+
+      .deadline-at {
+         time {
+            font-weight: 500;
+            color: #6d8593;
+         }
+      }
+
+      .created-at {
+         time {
+            font-weight: 500;
+            color: $blue_active;
+         }
+      }
+   }
+
+   .project-description {
+      img {
+         margin: 0 0 25px 0;
+      }
+
+      .description {
+         color:$default_text_color;
+         line-height: 19px;
+      }
+   }
+
+   .list {
+      list-style: none;
+      margin:0;
+      padding:0;
+
+      .mission + .mission {
+         border-top: solid 1px #f3f3f3;
+      }
+
+      .mission {
+         padding: 20px 10px;
+         margin: 0;
+
+         &.done {
+            background-color: #fafafa;
+            .members {
+               opacity: 0.3;
+            }
+            .deadline {
+               opacity: 0.5;
+            }
+            .metadata {
+               opacity: 0.4;
+            }
+         }
+
+         .icon-status {
+
+            display: block;
+            content: " ";
+            height: 18px;
+            width: 19px;
+            border-radius:2px;
+
+            &.in-progress {
+               background-color: #57c0df;
+            }
+
+            &.due {
+               background-color: #ff6e83;
+            }
+            &.validation {
+               background-color: #cf83c0;
+            }
+            &.done {
+               background: url($projects_image_path + 'mission_done_status.png') 3px center no-repeat scroll #73c26D;
+            }
+            &.paused {
+               background-color: #9cb6be;
+            }
+            &.draft {
+               background: url($projects_image_path + 'mission_draft.png') 3px center no-repeat scroll transparent;
+            }
+         }
+
+         .name {
+            font-size: 14px;
+            color:$default_text_color;
+            font-weight: 500;
+            cursor: pointer;
+         }
+
+         .members {
+            text-align: right;
+            img {
+               width: 24px;
+               border-radius:50%;
+            }
+            .more {
+               display: inline-block;
+               color: #9c9c9c;
+               height: 24px;
+               width: 24px;
+               background-color: #efeff1;
+               border-radius:50%;
+               font-size: 11px;
+               font-weight: 500;
+               line-height: 24px;
+               text-align: center;
+            }
+            img, .more {
+               margin-right: 10px;
+            }
+         }
+
+         .metadata {
+            & > div {
+               padding: 0 5px;
+            }
+            .icon {
+               display: inline-block;
+               vertical-align: middle;
+            }
+         }
+
+
+         .deadline, .metadata span {
+            font-size: 12px;
+            font-weight: 300;
+            color: #8fa8b7;
+         }
+
+         .deadline {
+            padding-left:0;
+         }
+
+         .icon-status, .deadline, .metadata, .members {
+            cursor: default;
+         }
+
+      }
+   }
+
+   .nice-block {
+      padding:25px;
+      margin-bottom: 25px;
+
+      h2 {
+         color:$default_text_color;
+         text-align: left;
+         font-size: 16px;
+         margin: 0 0 20px 0;
+      }
+   }
+}
