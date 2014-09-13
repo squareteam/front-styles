@@ -331,7 +331,10 @@ header.top-controls {
 }
 
 .current-scope-dropdown {
-   display: none !important;
+
+   &.vertical-center {
+      display: none;
+   }
 
    position: absolute;
    background-color: $darken_blue;
