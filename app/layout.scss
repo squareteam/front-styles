@@ -459,6 +459,7 @@ header.top-controls {
 
    // Top arrow
    &:after {
+      color: transparent;
       border-bottom-color: #2d4858;
       margin-left: 58px;
       border-style: solid;
