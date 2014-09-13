@@ -86,19 +86,23 @@ header.top_bar {
 // NAV //
 /////////
 
+$top_nav_height: 60px;
+
 nav {
-   height: 80px;
+   height: $top_nav_height;
    overflow: hidden;
    width: 42.666667% !important;
 
    .item {
       
-      height: 80px;
-      line-height: 80px;
-      text-align: center;
+      height: $top_nav_height;
       vertical-align: middle;
       margin-right: 15px;
 
+      line-height: $top_nav_height;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 300;
 
       .icon {
          margin: 0 auto;
@@ -141,7 +145,7 @@ nav {
    }
 
    .search {
-      width: 80px;
+      width: $top_nav_height;
       background: url($layout_image_path + "search.png") 45% 50% no-repeat scroll $blue_active;
    }
 }
@@ -154,7 +158,7 @@ nav {
       padding-right:0;
       padding-left:0;
       overflow: hidden;
-      line-height: 80px;
+      line-height: $top_nav_height;
       cursor: pointer;
 
       img {
@@ -164,7 +168,7 @@ nav {
 
    .menu {
       text-align: right;
-      line-height: 80px;
+      line-height: $top_nav_height;
       color: #5e7a8a;
       padding-right:10px;
 
@@ -179,9 +183,10 @@ nav {
 // CONTROLS TOP BAR //
 //////////////////////
 
+$top_controls_bar_height: 80px;
 
 header.top-controls {
-   height: 80px;
+   height: $top_controls_bar_height;
    background-color: $dark_blue;
 
    -moz-user-select: none;
@@ -191,7 +196,7 @@ header.top-controls {
    user-select: none;
 
    .current-scope {
-      height: 80px;
+      height: $top_controls_bar_height;
       padding-right: 0;
 
       // To fit with project cards width (not bootstrap grid based)
@@ -212,8 +217,8 @@ header.top-controls {
 
       .change {
          cursor: pointer;
-         height: 80px;
-         width: 80px;
+         height: $top_controls_bar_height;
+         width: $top_controls_bar_height;
          text-align: center;
 
          &.dropdown-open {
@@ -252,8 +257,8 @@ header.top-controls {
       .by_status, .by_team, .sort, .by_assignee {
          position: relative;
          margin-left: -3px;
-         height: 80px;
-         line-height: 80px;
+         height: $top_controls_bar_height;
+         line-height: $top_controls_bar_height;
          display: inline-block;
          width: 134px;
       }
