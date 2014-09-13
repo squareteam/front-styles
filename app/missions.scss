@@ -19,12 +19,11 @@
    &.icon-metadata-tasks {
       width: 20px;
       height: 20px;
-      background: url($projects_image_path + 'metadata_tasks.png') center -1px no-repeat scroll transparent;
+      background: url($projects_image_path + 'metadata_tasks.png') center 0px no-repeat scroll transparent;
    }
 }
 
 .project-missions {
-
 
    .content {
       padding-top: 20px;
@@ -37,8 +36,6 @@
          padding-right:0;
       }
    }
-
-   
 
    .nice-block.drafts {
       padding: 0 25px;
@@ -76,6 +73,7 @@
 
       .mission-progress {
          text-align: center;
+         cursor: default;
 
          .remaining {
             position: absolute;
@@ -122,6 +120,7 @@
 
       .description {
          color:$default_text_color;
+         line-height: 19px;
       }
    }
 
@@ -184,6 +183,7 @@
             font-size: 14px;
             color:$default_text_color;
             font-weight: 500;
+            cursor: pointer;
          }
 
          .members {
@@ -229,6 +229,11 @@
          .deadline {
             padding-left:0;
          }
+
+         .icon-status, .deadline, .metadata, .members {
+            cursor: default;
+         }
+
       }
    }
 
