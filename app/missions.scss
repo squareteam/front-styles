@@ -25,6 +25,15 @@
 
 .project-missions {
 
+   .current-scope-dropdown {
+      width: 347px;
+
+      li {
+         height: 66px;
+         line-height: 33px;
+      }
+   }
+
    .content {
       padding-top: 20px;
 
@@ -49,7 +58,7 @@
       }
    }
 
-   .deadline {
+   .deadline, .project-description {
       h2 {
          float:left;
       }
@@ -57,6 +66,9 @@
          float: right;
          margin-top: -2px;
       }
+   }
+
+   .deadline {
 
       .mission-progress-svg {
          circle {
