@@ -97,6 +97,10 @@ form.minimal {
       &:-webkit-autofill {
          -webkit-box-shadow: 0 0 0 1000px white inset;
       }
+
+      &.search {
+         background:url($layout_image_path + 'input-minimal-search.png') no-repeat scroll 97% center transparent;
+      }
    }
 }
 
