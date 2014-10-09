@@ -68,6 +68,19 @@
 
 .organizations_projects {
 
+
+   .current-scope {
+      .avatar {
+         padding-left:4px;
+      }
+   }
+
+   .current-scope-dropdown {
+      .avatar {
+         padding-left: 10px;
+      }
+   }
+
    .projects {
       padding-top: 50px;
       color:$default_text_color;
